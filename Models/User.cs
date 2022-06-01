@@ -8,8 +8,8 @@ namespace ThanksCardAPI.Models
         public string Password { get; set; }
         public bool IsAdmin { get; set; }
 
-        //テスト
-        public bool IsTest { get; set; }
+        //削除フラグ　Tureで削除扱い
+        public bool IsDelete { get; set; }
 
         // 多対1: User エンティティは1つの Department エンティティに属する
         public long? DepartmentId { get; set; }

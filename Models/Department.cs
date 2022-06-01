@@ -17,5 +17,7 @@ namespace ThanksCardAPI.Models
 
         // 1対多: Department エンティティには複数の User エンティティが属する
         public virtual ICollection<User> Users { get; set; }
+
+        public bool IsDeleted { get; set; }
     }
 }

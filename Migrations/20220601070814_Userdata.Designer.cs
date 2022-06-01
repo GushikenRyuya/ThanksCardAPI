@@ -12,8 +12,8 @@ using ThanksCardAPI.Models;
 namespace ThanksCardAPI.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20220601021353_addIsTest")]
-    partial class addIsTest
+    [Migration("20220601070814_Userdata")]
+    partial class Userdata
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -133,7 +133,7 @@ namespace ThanksCardAPI.Migrations
                     b.Property<bool>("IsAdmin")
                         .HasColumnType("boolean");
 
-                    b.Property<bool>("IsTest")
+                    b.Property<bool>("IsDelete")
                         .HasColumnType("boolean");
 
                     b.Property<string>("Name")

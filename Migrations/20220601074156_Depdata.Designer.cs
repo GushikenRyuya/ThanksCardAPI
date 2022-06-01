@@ -12,8 +12,8 @@ using ThanksCardAPI.Models;
 namespace ThanksCardAPI.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20220524005110_AddThanksCard")]
-    partial class AddThanksCard
+    [Migration("20220601074156_Depdata")]
+    partial class Depdata
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -34,6 +34,9 @@ namespace ThanksCardAPI.Migrations
 
                     b.Property<int>("Code")
                         .HasColumnType("integer");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
 
                     b.Property<string>("Name")
                         .HasColumnType("text");
@@ -131,6 +134,9 @@ namespace ThanksCardAPI.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<bool>("IsAdmin")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("IsDelete")
                         .HasColumnType("boolean");
 
                     b.Property<string>("Name")
