@@ -34,7 +34,6 @@ namespace ThanksCardAPI.Migrations
                         .HasColumnType("integer");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<long?>("ParentId")
@@ -56,7 +55,6 @@ namespace ThanksCardAPI.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -73,17 +71,15 @@ namespace ThanksCardAPI.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
 
                     b.Property<string>("Body")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("CreatedDateTime")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<long>("FromId")
                         .HasColumnType("bigint");
 
                     b.Property<string>("Title")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<long>("ToId")
@@ -135,12 +131,13 @@ namespace ThanksCardAPI.Migrations
                     b.Property<bool>("IsAdmin")
                         .HasColumnType("boolean");
 
+                    b.Property<bool>("IsTest")
+                        .HasColumnType("boolean");
+
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Password")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
