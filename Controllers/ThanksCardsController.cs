@@ -31,6 +31,7 @@ namespace ThanksCardAPI.Controllers
                                     .Include(ThanksCard => ThanksCard.To)
                                     .Include(ThanksCard => ThanksCard.ThanksCardTags)
                                         .ThenInclude(ThanksCardTag => ThanksCardTag.Tag)
+                                    .Where(s => s.IsSent == true)
                                     .ToListAsync();
         }
         #endregion

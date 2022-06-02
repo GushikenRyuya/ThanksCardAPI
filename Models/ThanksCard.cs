@@ -12,6 +12,9 @@ namespace ThanksCardAPI.Models
         public virtual User To { get; set; }
         public DateTime CreatedDateTime { get; set; }
 
+        //テスト
+        public bool IsSent { get; set; }
+
         public virtual ICollection<ThanksCardTag> ThanksCardTags { get; set; }
     }
 }
