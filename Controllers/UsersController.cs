@@ -97,7 +97,8 @@ namespace ThanksCardAPI.Controllers
                 return NotFound();
             }
 
-            _context.Users.Remove(user);
+            //_context.Users.Remove(user);
+            user.IsDelete = !user.IsDelete;
             await _context.SaveChangesAsync();
 
             return NoContent();
