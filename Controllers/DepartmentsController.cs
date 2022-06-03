@@ -25,7 +25,8 @@ namespace ThanksCardAPI.Controllers
         public async Task<ActionResult<IEnumerable<Department>>> GetDepartments()
         {
             return await _context.Departments
-                //.Where(d => d.IsDeleted == false)
+                //削除フラグがTrueの物は表示しない
+                .Where(d => d.IsDeleted == false)
                 .ToListAsync();
         }
 
@@ -102,6 +103,7 @@ namespace ThanksCardAPI.Controllers
             }
 
             //_context.Departments.Remove(department);
+            //削除フラグをTrueにする
             department.IsDeleted = true;
             await _context.SaveChangesAsync();
 
