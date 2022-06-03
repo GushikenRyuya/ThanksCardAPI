@@ -31,8 +31,6 @@ namespace ThanksCardAPI.Controllers
                                     .Include(ThanksCard => ThanksCard.To)
                                     .Include(ThanksCard => ThanksCard.ThanksCardTags)
                                         .ThenInclude(ThanksCardTag => ThanksCardTag.Tag)
-                                    //送信フラグがTrueの物のみ表示
-                                    .Where(s => s.IsSent == true)
                                     .ToListAsync();
         }
         #endregion
