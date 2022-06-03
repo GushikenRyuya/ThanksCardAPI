@@ -28,8 +28,7 @@ namespace ThanksCardAPI.Controllers
                 .Where(s => s.Body!.Contains(searchThanksCard.SearchWord) 
                 || s.Title!.Contains(searchThanksCard.SearchWord) 
                 || s.From!.Name.Contains(searchThanksCard.SearchWord) 
-                || s.To!.Name.Contains(searchThanksCard.SearchWord)
-                || s.IsSent == true)
+                || s.To!.Name.Contains(searchThanksCard.SearchWord))
                 .ToListAsync();
         }
     }

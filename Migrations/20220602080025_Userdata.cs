@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace ThanksCardAPI.Migrations
 {
-    public partial class adds : Migration
+    public partial class Userdata : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -18,7 +18,8 @@ namespace ThanksCardAPI.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Code = table.Column<int>(type: "integer", nullable: false),
                     Name = table.Column<string>(type: "text", nullable: true),
-                    ParentId = table.Column<long>(type: "bigint", nullable: true)
+                    ParentId = table.Column<long>(type: "bigint", nullable: true),
+                    IsDeleted = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -52,7 +53,7 @@ namespace ThanksCardAPI.Migrations
                     Name = table.Column<string>(type: "text", nullable: true),
                     Password = table.Column<string>(type: "text", nullable: true),
                     IsAdmin = table.Column<bool>(type: "boolean", nullable: false),
-                    IsTest = table.Column<bool>(type: "boolean", nullable: false),
+                    IsDelete = table.Column<bool>(type: "boolean", nullable: false),
                     DepartmentId = table.Column<long>(type: "bigint", nullable: true)
                 },
                 constraints: table =>
@@ -75,7 +76,8 @@ namespace ThanksCardAPI.Migrations
                     Body = table.Column<string>(type: "text", nullable: true),
                     FromId = table.Column<long>(type: "bigint", nullable: false),
                     ToId = table.Column<long>(type: "bigint", nullable: false),
-                    CreatedDateTime = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
+                    CreatedDateTime = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    IsSent = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {

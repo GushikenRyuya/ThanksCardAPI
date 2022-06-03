@@ -12,8 +12,8 @@ using ThanksCardAPI.Models;
 namespace ThanksCardAPI.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20220601074156_Depdata")]
-    partial class Depdata
+    [Migration("20220602080025_Userdata")]
+    partial class Userdata
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -83,6 +83,9 @@ namespace ThanksCardAPI.Migrations
 
                     b.Property<long>("FromId")
                         .HasColumnType("bigint");
+
+                    b.Property<bool>("IsSent")
+                        .HasColumnType("boolean");
 
                     b.Property<string>("Title")
                         .HasColumnType("text");
