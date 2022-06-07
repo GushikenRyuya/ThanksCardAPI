@@ -48,7 +48,7 @@ namespace ThanksCardAPI.Controllers
             return thanksCard;
         }
 
-        [HttpDelete("id")]
+        [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteThanksCard(long id)
         {
             var thankscard = await _context.ThanksCards.FindAsync(id);
