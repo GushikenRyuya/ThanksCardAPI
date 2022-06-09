@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace ThanksCardAPI.Migrations
 {
-    public partial class Userdata : Migration
+    public partial class APIdata : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -12,8 +12,8 @@ using ThanksCardAPI.Models;
 namespace ThanksCardAPI.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20220602080025_Userdata")]
-    partial class Userdata
+    [Migration("20220609043920_APIdata")]
+    partial class APIdata
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
