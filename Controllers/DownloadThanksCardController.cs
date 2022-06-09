@@ -30,11 +30,12 @@ namespace ThanksCardAPI.Controllers
             {
                 return NotFound();
             }
+            return thankscard;
 
-            string str = "タイトル："+thankscard.Title+/*"\n送信者名:"+thankscard.To.Name +"\n受信者名:"+thankscard.From.Name+*/"\n本文:"+thankscard.Body;
-            Encoding encoding = Encoding.UTF8;
-            byte[] Bytes = encoding.GetBytes(str);
-            return File(Bytes, "%USERPROFILE%/Desktop", "test.txt");
+            //string str = "タイトル："+thankscard.Title+/*"\n送信者名:"+thankscard.To.Name +"\n受信者名:"+thankscard.From.Name+*/"\n本文:"+thankscard.Body;
+            //Encoding encoding = Encoding.UTF8;
+            //byte[] Bytes = encoding.GetBytes(str);
+            //return File(Bytes, "%USERPROFILE%/Desktop", "test.txt");
         }
     }
 }
